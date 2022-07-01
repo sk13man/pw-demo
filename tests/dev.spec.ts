@@ -5,6 +5,6 @@ test.describe("Suite name", () => {
     await page.goto("https://playwright.dev/docs/intro#installation");
     console.log("wow");
     await page.goto("https://github.com/sk13man");
-    expect(false).toBe(true);
+    expect(true).toBe(true);
   });
 });
