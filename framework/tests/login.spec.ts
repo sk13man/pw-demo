@@ -1,4 +1,4 @@
-import { test } from '@playwright/test';
+import { expect, test } from '@playwright/test';
 import App from '../pages';
 
 const user = {
@@ -10,6 +10,9 @@ test.describe('Login', () => {
     const app = new App(page);
     await app.loginPage.open();
     await app.loginPage.login(user.login, user.pass);
+    expect(await app.userMenu.userMenuButton.isVisible()).toBeTruthy();
+    await app.notifications.closeIfOpened();
+    // await app.userMenu.open();
     // await page.pause();
   });
 });

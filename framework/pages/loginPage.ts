@@ -23,7 +23,6 @@ export default class LoginPage {
     await this.passInput.type(pass);
     await this.otpInput.type(random.word({ length: 5 }));
     await this.loginBtn.click();
-    console.log(`logged as ${login} : ${pass}`);
   }
 
   async open() {
